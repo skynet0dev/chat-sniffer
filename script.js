@@ -95,8 +95,7 @@ const smileyHTML = "<div class='smiley-container'>" +
     "  <span class='smile' title='Смех'>😀</span> " +
     "  <span class='smile' title='Улыбка'>😊</span> " +
     "  <span class='smile' title='Радость'>😍</span> " +
-    "  <span class='smile' title='Сердитость'>😠</span>
-" +
+    "  <span class='smile' title='Сердитость'>😠</span>" +
     "</div>";
 
 // Вставляем смайлики в форму
