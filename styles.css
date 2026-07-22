@@ -1,0 +1,125 @@
+/* Основные стили для чата */
+/* CSS переменные для тем */
+:root {
+    --bg-light: #f5f7fa;
+    --bg-dark: #1a1a2e;
+    --text-light: #333;
+    --text-dark: #ffffff;
+    --message-bg-light: #f9f9f9;
+    --message-bg-dark: #2d2d4a;
+    --form-bg-light: #e9ecef;
+    --form-bg-dark: #161626;
+    --button-bg-light: #6c5ce7;
+    --button-bg-dark: #3b2f80;
+    --border-color: #ddd;
+}
+
+/* Стиль для тёмной темы */
+body.dark-mode {
+    --bg-light: var(--bg-dark);
+    --text-light: var(--text-dark);
+    --message-bg-light: var(--message-bg-dark);
+    --form-bg-light: var(--form-bg-dark);
+    --button-bg-light: var(--button-bg-dark);
+    background-color: var(--bg-dark);
+    color: var(--text-dark);
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.header {
+    padding: 20px 30px;
+    background-color: #6c5ce7;
+    color: white;
+    text-align: center;
+}
+
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    height: 600px;
+}
+
+.messages {
+    flex-grow: 1;
+    padding: 20px;
+    overflow-y: auto;
+    background-color: var(--message-bg-light);
+    border-radius: 5px;
+    margin-bottom: 10px;
+    max-height: calc(100vh - 160px); /* Подстраиваем под высоту экрана */
+}
+
+.message-form {
+    display: flex;
+    gap: 10px;
+    padding: 10px 20px;
+    background-color: var(--form-bg-light);
+    border-radius: 5px;
+}
+
+#username-input, #message-input {
+    flex-grow: 1;
+    padding: 8px 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+button[type="submit"] {
+    background-color: var(--button-bg-light);
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button[type="submit"]:hover {
+    background-color: #5a4fa3;
+}
+
+.message {
+    margin-bottom: 10px;
+    padding: 10px 12px;
+    border-radius: 18px;
+    max-width: 70%;
+    word-wrap: break-word;
+}
+
+.message.user {
+    background-color: var(--message-bg-light);
+    color: white;
+    margin-left: auto;
+    border-bottom-right-radius: 4px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.message.other {
+    background-color: var(--message-bg-light);
+    color: var(--text-dark);
+    margin-right: auto;
+    border-bottom-left-radius: 4px;
+}
+
+.smile {
+    font-size: 18px;
+    cursor: pointer;
+    display: inline-block;
+    margin: 5px;
+    padding: 2px;
+    background-color: #f0f0f0;
+    border-radius: 50%;
+}
+
+.smile:hover {
+    background-color: #e0e0e0;
+}

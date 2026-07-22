@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Веб-чат</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1>Веб-чат</h1>
+        <button id="theme-toggle" class="theme-toggle-button" title="Переключить темную тему">🌙</button>
+    </header>
+        <div class="chat-container">
+            <div id="messages" class="messages"></div>
+            <form id="message-form" class="message-form">
+                <input type="text" id="username-input" placeholder="Введите никнейм..." required>
+                <input type="text" id="message-input" placeholder="Введите сообщение..." required>
+                <button type="submit">Отправить</button>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
